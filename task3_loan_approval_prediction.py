@@ -5,7 +5,7 @@ import json
 import numpy as np
 import pandas as pd
 import streamlit as st
-from joblib import load
+import joblib
 
 # ---------------------------------------------------
 # MUST be first Streamlit command
@@ -17,7 +17,7 @@ st.set_page_config(page_title="Loan Approval Predictor", page_icon="💳", layou
 # ---------------------------------------------------
 @st.cache_resource
 def load_assets():
-    model = load("loan_approval_pipeline.joblib")
+    model = joblib.load("loan_approval_pipeline.joblib")
     with open("schema.json", "r") as f:
         schema = json.load(f)
     return model, schema
