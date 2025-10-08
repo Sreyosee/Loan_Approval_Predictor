@@ -1,0 +1,32 @@
+{
+  "num_cols": [
+    "loan_id",
+    " no_of_dependents",
+    " income_annum",
+    " loan_amount",
+    " loan_term",
+    " cibil_score",
+    " residential_assets_value",
+    " commercial_assets_value",
+    " luxury_assets_value",
+    " bank_asset_value"
+  ],
+  "cat_cols": [
+    " education",
+    " self_employed"
+  ],
+  "defaults": {
+    "loan_id": 2135.0,
+    " no_of_dependents": 3.0,
+    " income_annum": 5100000.0,
+    " loan_amount": 14500000.0,
+    " loan_term": 10.0,
+    " cibil_score": 600.0,
+    " residential_assets_value": 5600000.0,
+    " commercial_assets_value": 3700000.0,
+    " luxury_assets_value": 14600000.0,
+    " bank_asset_value": 4600000.0,
+    " education": " Graduate",
+    " self_employed": " Yes"
+  }
+}
