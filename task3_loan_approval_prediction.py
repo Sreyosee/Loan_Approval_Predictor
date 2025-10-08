@@ -7,14 +7,11 @@ import pandas as pd
 import streamlit as st
 import joblib
 
-# ---------------------------------------------------
-# MUST be first Streamlit command
-# ---------------------------------------------------
+
 st.set_page_config(page_title="Loan Approval Predictor", page_icon="💳", layout="centered")
 
-# ---------------------------------------------------
 # Load trained model and schema
-# ---------------------------------------------------
+
 @st.cache_resource
 def load_assets():
     model = joblib.load("loan_approval_pipeline.joblib")
@@ -28,9 +25,9 @@ except FileNotFoundError as e:
     st.error(f"Missing file: {e}. Make sure 'loan_approval_pipeline.joblib' and 'schema.json' are in the same folder as this app.")
     st.stop()
 
-# ---------------------------------------------------
+
 # Setup columns and defaults
-# ---------------------------------------------------
+
 num_cols = schema.get("num_cols", [])
 cat_cols = schema.get("cat_cols", [])
 defaults = schema.get("defaults", {})
@@ -38,10 +35,9 @@ defaults = schema.get("defaults", {})
 st.title("💳 Loan Approval Predictor")
 st.caption("Preprocessing + SMOTE are built into this trained pipeline.")
 
-# ---------------------------------------------------
 # SINGLE form with a unique key
-# ---------------------------------------------------
-FORM_KEY = "loan_form_unique"  # ✅ unique key (fixed)
+
+FORM_KEY = "loan_form_unique"  
 
 with st.form(key=FORM_KEY):
     st.subheader("Applicant Details")
@@ -60,9 +56,9 @@ with st.form(key=FORM_KEY):
 
     submitted = st.form_submit_button("Predict")
 
-# ---------------------------------------------------
+
 # Predict after submission
-# ---------------------------------------------------
+
 if submitted:
     X_infer = pd.DataFrame([values])
     pred = model.predict(X_infer)[0]
