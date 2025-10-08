@@ -49,6 +49,3 @@ The model predicts whether a loan application will be approved based on various 
 ---
 
 
-
-## 🧩 Project Structure
-
