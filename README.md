@@ -5,11 +5,6 @@ Built with **Python**, **scikit-learn**, and **Streamlit**, this app demonstrate
 
 ---
 
-## 🚀 Live App
-👉 [Launch on Streamlit Cloud](# 💳 Loan Approval Predictor
-
-A machine learning web app that predicts whether a **loan application** will be approved based on applicant details.  
-Built with **Python**, **scikit-learn**, and **Streamlit**, this app demonstrates a complete end-to-end ML workflow — from training and model evaluation to interactive web deployment.
 
 ---
 
