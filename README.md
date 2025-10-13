@@ -5,12 +5,8 @@ Built with **Python**, **scikit-learn**, and **Streamlit**, this app demonstrate
 
 ---
 
-
----
-
 ## 🚀 Live App
 👉 [Launch on Streamlit Cloud](https://loanapprovalpredictor-bktaearft8jexbmbrjdznl.streamlit.app/)  
-
 
 ---
 
